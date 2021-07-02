@@ -51,6 +51,9 @@ class InputStream(azf_abc.InputStream):
     def seekable(self) -> bool:
         return False
 
+    def write(self, b) -> int:
+        return self._io.write(b)
+
     def writable(self) -> bool:
         return False
 
